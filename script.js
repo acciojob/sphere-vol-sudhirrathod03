@@ -17,13 +17,13 @@ function volume_sphere() {
 	return;
 }
 	
-let radiusVal = Number(radius.value);
+let radiusVal = parseFloat(radius.value);
 	
 if(radiusVal < 0){
 	volume.value = "NaN"
 }
 else{
-		let calculatedVolume = (4/3) * pi * radiusVal ** 3
+		let calculatedVolume = (4/3) * Math.PI * radiusVal ** 3;
 		volume.value = calculatedVolume.toFixed(4)
 	}
 
