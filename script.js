@@ -4,14 +4,14 @@ let volume = document.getElementById("volume")
 let myForm = document.getElementById("MyForm")
 
 
-myForm.addEventListener("submit", ()=>{
+myForm.addEventListener("submit", (e)=>{
+	e.preventDefault();
 
 	volume_sphere()
 })
 const pi = 3.14;
 
-function volume_sphere(e) {	
-	e.preventDefault();
+function volume_sphere() {	
 	if(radius.value === ""){
 	volume.value = ""
 	return;
